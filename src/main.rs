@@ -1,12 +1,17 @@
 use rustyline::{DefaultEditor, config::Configurer};
 
-mod calculator;
-mod fprice;
+// Trait-based modules
+mod traits;
+mod evaluator;
+mod converter;
+mod formatter;
+mod bitview;
+mod calculator2;
 
-use calculator::engine::Calculator;
+use calculator2::Calculator;
 
 fn main() -> rustyline::Result<()> {
-    println!("Qalculate CLI - Interactive Calculator");
+    println!("Qalculate CLI - Interactive Calculator (Trait-based)");
     println!("Type 'exit' or 'quit' to exit\n");
 
     let mut rl = DefaultEditor::new()?;
@@ -25,7 +30,7 @@ fn main() -> rustyline::Result<()> {
             Err(e) => println!("Error: {}", e),
         }
 
-        // ⭐ IMPORTANT: store history
+        // Store history
         rl.add_history_entry(input)?;
     }
 
