@@ -1,5 +1,7 @@
 # trait-based
 - The trait-based calculator is working perfectly. Here's a summary of the new architecture:
+- 바꾼 코드 훈련
+  - https://github.com/YoungHaKim7/tcal_rs_backup/commit/c3af52c31d69c3b07e15d9e46685a17ee9f79ed7
 
 ## Project Structure Created
 
